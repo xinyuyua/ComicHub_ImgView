@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ComicHub</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="button">Search</string>
+    <string name="textView">Search tag:</string>
+    <string name="error">Failed to get the picture</string>
+    <string name="title_activity_pic">Pic</string>
+    <string name="title_activity_pic_show_activty">PicShowActivty</string>
+    <string name="nextButton">Next</string>
+    <string name="beforeButton">Before</string>
+    <string name="prevpage">Prevpage</string>
+    <string name="nextpage">Nextpage</string>
+    <string name="preverror">NoPrevPage</string>
+    <string name="nexterror">NoNextPage</string>
+    <string name="nopicerror">No Picture Founded!</string>
+
+</resources>
