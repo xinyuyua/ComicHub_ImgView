@@ -44,8 +44,11 @@ public class MainActivity extends Activity implements OnItemClickListener{
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-				//ArrayAdapter<String> adapter=new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_expandable_list_item_1, autostr);
-				ArrayAdapter<String> adapter=new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_dropdown_item_1line, autostr);
+				
+				ArrayAdapter<String> adapter=new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_expandable_list_item_1, autostr);
+				//This line works for android sdk6
+				//ArrayAdapter<String> adapter=new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_dropdown_item_1line, autostr);
+				//This line works for android sdk 8 
 				autoCompleteTextView.setAdapter(adapter);  
 
 			}
