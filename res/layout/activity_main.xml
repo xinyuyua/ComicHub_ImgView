@@ -32,8 +32,22 @@
         android:onClick="searchImage"/>
     </LinearLayout>
 
-    <GridView android:id="@+id/gridView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numColumns="3" android:verticalSpacing="10dp" android:horizontalSpacing="10dp" android:stretchMode="columnWidth" android:gravity="center" />
-
-
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:fastScrollEnabled="false"  
+        android:footerDividersEnabled="false"  
+        android:headerDividersEnabled="false"  
+        android:smoothScrollbar="true" 
+        ptr:ptrAnimationStyle="flip"
+         />
 
 </LinearLayout>

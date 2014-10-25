@@ -32,7 +32,7 @@ public class PicsService {
 		
 	
 	public static List<Pic> getPics() throws Exception{
-		String path = "http://danbooru.donmai.us/posts.json?tags="+tag+"&limit=20&page="+String.valueOf(page);
+		String path = "http://danbooru.donmai.us/posts.json?tags="+tag+"&limit=9&page="+String.valueOf(page);
 		//StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
 		HttpURLConnection conn = (HttpURLConnection)new URL(path).openConnection();
 		conn.setConnectTimeout(5000);
