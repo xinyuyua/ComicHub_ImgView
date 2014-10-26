@@ -17,11 +17,11 @@ import android.widget.ImageView;
  * 
  */
 
-class gridAdapter extends BaseAdapter{ 
+class GridAdapter extends BaseAdapter{ 
 	
 	 private LayoutInflater inflater; 
 
-        public gridAdapter(Context context){ 
+        public GridAdapter(Context context){ 
         	super();
         	 inflater = LayoutInflater.from(context); 
         } 

@@ -8,7 +8,9 @@
         android:id="@+id/selection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/textView" />
+        android:text="@string/textView"
+        android:textSize="@dimen/info_size"
+         />
 
     <LinearLayout
         android:layout_width="match_parent"

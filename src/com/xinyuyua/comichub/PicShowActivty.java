@@ -1,5 +1,7 @@
 package com.xinyuyua.comichub;
 
+import java.util.HashMap;
+
 import com.xinyuyua.comichub.R;
 
 import android.app.Activity;
@@ -32,9 +34,8 @@ public class PicShowActivty extends Activity implements OnGestureListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-        
 		setContentView(R.layout.activity_pic_show);
+		
 		beforeButton = (Button) findViewById(R.id.beforeButton);
 		nextButton = (Button) findViewById(R.id.nextButton);
 		imageView = (ImageView) this.findViewById(R.id.imageView);
@@ -52,7 +53,7 @@ public class PicShowActivty extends Activity implements OnGestureListener {
 	public void showNext(View v) throws Exception{
 		count++;
 		checkClickable();
-		if(count == MainActivity.pics.size() && MainActivity.picsServer.nextPageEnable()){
+		if(count == MainActivity.pics.size() && PicsService.nextPageEnable()){
 			MainActivity.pics = PicsService.getNextPics();
 			count = 0;
 		}
@@ -62,11 +63,18 @@ public class PicShowActivty extends Activity implements OnGestureListener {
 	public void showBefore(View v) throws Exception{
 		count--;
 		checkClickable();
-		if(count == -1 && MainActivity.picsServer.nextPageEnable()){
+		if(count == -1 && PicsService.nextPageEnable()){
 			MainActivity.pics = PicsService.getPrevPics();
 			count = MainActivity.pics.size()-1;
 		}
 		showPic();
+	}
+	
+	public void showInfo(View v) throws Exception{
+
+		Intent disIntent=new Intent(this,PicInfoActivity.class);
+		disIntent.putExtra("count",count);
+		startActivity(disIntent);
 	}
 	
 	private void showPic(){
@@ -93,7 +101,7 @@ public class PicShowActivty extends Activity implements OnGestureListener {
 
 	@Override
 	public boolean onDown(MotionEvent e) {
-		return true;
+		return false;
 	}
 
 	@Override

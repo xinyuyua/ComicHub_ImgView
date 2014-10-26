@@ -37,12 +37,8 @@ public class MainActivity extends Activity implements OnItemClickListener{
 	
 	//Use pulltorefresh scource code
 	private PullToRefreshGridView gridView;  
-	private gridAdapter gridAdapter;
-	private LinkedList<String> mListItems;  
-    private ArrayAdapter<String> mAdapter;  
-    private int mItemCount = 10;  
-    
-	public static PicsService picsServer;
+	private GridAdapter gridAdapter;
+	//public static PicsService picsServer;
 	public static List<Pic> pics;
 
 	@Override
@@ -138,9 +134,9 @@ public class MainActivity extends Activity implements OnItemClickListener{
 			
 			pics = PicsService.getPics();
 			gridView = (PullToRefreshGridView) findViewById(R.id.pull_refresh_grid); 
-			gridAdapter = new gridAdapter(this); 
+			gridAdapter = new GridAdapter(this); 
 			gridView.setAdapter(gridAdapter); 
-	        
+			gridView.setOnItemClickListener(this);
 	        gridView.setOnRefreshListener(new OnRefreshListener<GridView>()  
             {  
 				public void onRefresh(PullToRefreshBase<GridView> refreshView) {
