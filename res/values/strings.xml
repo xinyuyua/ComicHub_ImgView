@@ -15,5 +15,15 @@
     <string name="preverror">NoPrevPage</string>
     <string name="nexterror">NoNextPage</string>
     <string name="nopicerror">No Picture Founded!</string>
+    <string name="detailButton">Detail</string>
+    <string name="info_id">Id</string>
+    <string name="info_uploader">Uploader</string>
+    <string name="info_date">Date</string>
+    <string name="info_width">Width</string>
+    <string name="info_height">Height</string>
+    <string name="info_path">Picpath</string>
+    <string name="info_tags">Tags</string>
+    <string name="title_activity_pic_info">PicInfoActivity</string>
+    <dimen name="info_size">24dp</dimen>
 
 </resources>

@@ -28,6 +28,10 @@
             android:name="com.xinyuyua.comichub.PicShowActivty"
             android:label="@string/title_activity_pic_show_activty" >
         </activity>
+         <activity
+            android:name="com.xinyuyua.comichub.PicInfoActivity"
+            android:label="@string/title_activity_pic_info" >
+        </activity>
     </application>
 
 </manifest>
